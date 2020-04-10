@@ -1,0 +1,24 @@
+<ion-header [translucent]="true" no-border>
+    <ion-toolbar color="dark">
+        <ion-title>
+            Pendientes
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" color="dark">
+
+    <ion-list color="dark">
+        <ion-item *ngFor="let listItem of listasTodo" detail color="dark">
+            <ion-label>{{listItem.titulo}}</ion-label>
+        </ion-item>
+    </ion-list>
+
+    <!-- fab placed to the top end -->
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button color="tertiary" (click)="agregarLista()">
+            <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+
+</ion-content>
