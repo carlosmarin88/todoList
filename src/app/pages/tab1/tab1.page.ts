@@ -18,7 +18,7 @@ export class Tab1Page {
     this.listasTodo = todoService.getLista();
   }
 
-  public async agregarLista(){
+  public async agregarLista() {
     // this.router.navigateByUrl('tabs/tab1/agregar');
 
     const alert = await this.alertCtrl.create({
@@ -46,7 +46,8 @@ export class Tab1Page {
               return;
             }
             // Crear la lista
-            this.todoService.crearLista(data.titulo);
+            const idLista = this.todoService.crearLista(data.titulo);
+            this.router.navigateByUrl(`tabs/tab1/agregar/${idLista}`);
           }
         },
       ]

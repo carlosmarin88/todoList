@@ -28,6 +28,13 @@ export class TodoService {
     const nuevaListta = new Lista(titulo);
     this.listas.push(nuevaListta);
     this.guardarStorage();
+
+    return nuevaListta.id;
+  }
+
+  public obtenerLista(id: string | number) {
+     id = Number(id);
+     return this.listas.find( listaData => listaData.id === id);
   }
 
   public guardarStorage() {
