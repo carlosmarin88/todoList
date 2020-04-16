@@ -55,4 +55,9 @@ export class AgregarPage implements OnInit {
     this.todoService.guardarStorage();
   }
 
+  public borrar(i: number) {
+    this.listaSeleccionada.items.splice(i, 1);
+    this.todoService.guardarStorage();
+  }
+
 }

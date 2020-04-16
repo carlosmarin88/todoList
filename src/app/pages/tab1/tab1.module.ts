@@ -5,12 +5,15 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Tab1Page } from './tab1.page';
 import { ExploreContainerComponentModule } from '../../explore-container/explore-container.module';
+import { ComponentsModule } from 'src/app/components/components.module';
 
 @NgModule({
   imports: [
     IonicModule,
     CommonModule,
     FormsModule,
+    /*importo el modulo que genere para utilizarlo*/
+    ComponentsModule,
     ExploreContainerComponentModule,
     RouterModule.forChild([{ path: '', component: Tab1Page }])
   ],
